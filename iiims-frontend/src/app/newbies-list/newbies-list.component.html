@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Newbie List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Newbie ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Manager Name</th>
+            <th>Email</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let newbie of newbies | async">
+            <!--
+            <div *ngIf = "(newbies | async).length==0; else show_newbies">
+              <p>Newbie List is empty!</p>
+            </div>
+            -->
+            <!--<ng-template #show_newbies>-->
+            <td>{{newbie.empID}}</td>
+            <td>{{newbie.firstName}}</td>
+            <td>{{newbie.lastName}}</td>
+            <td>{{newbie.gender}}</td>
+            <td>{{newbie.managerName}}</td>
+            <td>{{newbie.email}}</td>
+            <td>{{newbie.state}}</td>
+            
+            <td><button (click)="deleteNewbie(newbie._id)" class="btn btn-danger">Delete</button>
+            <!--</ng-template>-->
+              
+                <button (click)="updateNewbie(newbie._id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="newbieDetails(newbie._id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

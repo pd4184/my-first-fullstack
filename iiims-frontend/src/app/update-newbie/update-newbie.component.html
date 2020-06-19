@@ -1,0 +1,31 @@
+<div id="updateNewbie">
+<h3>Update Newbie Employee ID {{newbie.empID}}</h3>
+<div  style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="newbie.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="newbie.lastName" name="lastName">
+    </div>
+    <div class="form-group">
+        <label for="name">Manager Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="newbie.managerName" name="managerName">
+      </div>
+
+    <div class="form-group">
+      <label for="name">Email ID</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="newbie.email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="name">State</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="newbie.state" name="state">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+</div>

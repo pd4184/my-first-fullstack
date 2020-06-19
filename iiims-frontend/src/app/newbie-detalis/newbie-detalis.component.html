@@ -1,0 +1,34 @@
+<div id="newbieDetails">
+<h2>Newbie Details</h2> 
+
+<hr/>
+<div *ngIf="newbie">
+  
+  <div>
+      <label><b>Employee ID:</b></label>{{newbie.empID}}
+    </div>
+    <div>
+    <label><b>First Name: </b></label> {{newbie.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{newbie.lastName}}
+  </div>
+  <div>
+    <label><b>Gender: </b></label> {{newbie.gender}}
+  </div>
+  <div>
+    <label><b>Manager Name: </b></label> {{newbie.managerName}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{newbie.email}}
+  </div>
+  
+  <div>
+    <label><b>State: </b></label> {{newbie.state}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Newbie List</button><br>
+</div>
